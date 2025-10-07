@@ -1,0 +1,37 @@
+.container {
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    text-align: center;
+}
+
+body {
+    background-color: #ff0101;
+    font-family: Arial, sans-serif;
+}
+
+.input {
+    width: 100%;    
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: solid;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: solid;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+}

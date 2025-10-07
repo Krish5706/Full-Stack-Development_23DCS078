@@ -1,0 +1,80 @@
+.app-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 190px;
+  height: 100%;
+  padding: 20px;
+  background-color: skyblue;
+  color: black;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+    gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+
+}
+.main-content {
+  flex: 1;
+  text-align: center;
+  transition: margin-left 0.3s ease;
+}
+
+/* Shift main content when sidebar is open */
+.sidebar.open ~ .main-content {
+  margin-left: 250px;
+}
